@@ -2,7 +2,7 @@ package ty.springboot.mybatis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import ty.springboot.mybatis.domain.CityMapper;
+import ty.springboot.mybatis.dao.CityMapper;
 
 @SpringBootApplication
 public class DemoApplication {
