@@ -1,5 +1,10 @@
 package hello;
 
+import java.util.concurrent.ExecutionException;
+
+import org.junit.Test;
+import org.springframework.scheduling.annotation.AsyncResult;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
@@ -28,5 +33,12 @@ public class User {
     public String toString() {
         return "User [name=" + name + ", blog=" + blog + "]";
     }
-
+    @Test
+    public void test() throws ExecutionException{
+    	AsyncResult<String> res = new AsyncResult<>("hello");
+    	while(res.isDone()!=true){
+    		
+    	}
+    	System.out.println(res.get());
+    }
 }
